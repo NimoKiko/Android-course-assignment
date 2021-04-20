@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_anytime"
+            android:text="任意时间"
+            android:textSize="12sp"
+            android:layout_width="75dp"
+            android:layout_height="35dp"/>
+
+        <Button
+            android:id="@+id/btn_morning"
+            android:text="晨间时间"
+            android:textSize="12sp"
+            android:layout_width="75dp"
+            android:layout_height="35dp"/>
+
+        <Button
+            android:id="@+id/btn_afternoon"
+            android:text="午间时间"
+            android:textSize="12sp"
+            android:layout_width="75dp"
+            android:layout_height="35dp"/>
+
+        <Button
+            android:id="@+id/btn_evening"
+            android:text="晚间时间"
+            android:textSize="12sp"
+            android:layout_width="75dp"
+            android:layout_height="35dp"/>
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/GDVHabitInfo"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:numColumns="4"
+        android:scrollbars="none" />
+
+</LinearLayout>

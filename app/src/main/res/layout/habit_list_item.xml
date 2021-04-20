@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#EFEFEF"
+    android:layout_width="match_parent"
+    android:layout_height="80dp">
+
+    <ImageView
+        android:id="@+id/imgHabitLableSample"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="10dp"
+        android:src="@mipmap/ic_launcher_round"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/txtHabitNameSample"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/txtHabitNameSample"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="201dp"
+        android:layout_marginBottom="7dp"
+        android:text="晨跑"
+        android:textColor="#040404"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtMotivationWord"
+        app:layout_constraintEnd_toStartOf="@+id/txtHabitInsisted"
+        app:layout_constraintStart_toEndOf="@+id/imgHabitLableSample"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtMotivationWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="只有千锤百炼，才能成为好钢。"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/txtHabitNameSample"
+        app:layout_constraintTop_toBottomOf="@+id/txtHabitNameSample" />
+
+    <TextView
+        android:id="@+id/txtHabitDaySample"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:text="15天"
+        android:textColor="#020202"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtHabitInsisted"
+        app:layout_constraintStart_toStartOf="@+id/txtHabitInsisted"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/txtHabitInsisted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text="共计坚持"
+        android:textColor="#737373"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtHabitNameSample"
+        app:layout_constraintTop_toBottomOf="@+id/txtHabitDaySample" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:id="@+id/layoutToday"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+        
+        <ImageView
+            android:id="@+id/imgToday"
+            android:src="@drawable/ic_home_1_normal"
+            android:layout_width="35dp"
+            android:layout_height="35dp"/>
+        <TextView
+            android:id="@+id/txtToday"
+            android:textColor="#7C7C7C"
+            android:textSize="16sp"
+            android:text="今日"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutAll"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgAll"
+            android:src="@drawable/ic_all_normal"
+            android:layout_width="35dp"
+            android:layout_height="35dp"/>
+        <TextView
+            android:id="@+id/txtAll"
+            android:textColor="#7C7C7C"
+            android:textSize="16sp"
+            android:text="全部"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutMine"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgMine"
+            android:src="@drawable/ic_more_normal"
+            android:layout_width="35dp"
+            android:layout_height="35dp"/>
+        <TextView
+            android:id="@+id/textMine"
+            android:textColor="#7C7C7C"
+            android:textSize="16sp"
+            android:text="我的"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="49dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@id/btnBack"
+            android:text="添加习惯"
+            android:textColor="#000000"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnYes"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="317dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@id/btnBack"
+            android:background="@drawable/yes" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="518dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout1">
+
+        <ImageView
+            android:id="@+id/imgHabit_Lable"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/habit_1" />
+
+        <EditText
+            android:id="@+id/editHabit_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="给习惯命个名吧"
+            android:textColor="#000000"
+            android:textAlignment="center"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtChooseALable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="选择图标:"
+        android:textColor="#000000"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtChooseALable">
+
+        <RadioButton
+            android:id="@+id/ChoosableImg1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/habit_1"
+            android:button="@null" />
+
+        <RadioButton
+            android:id="@+id/ChoosableImg2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/habit_2"
+            android:button="@null" />
+
+        <RadioButton
+            android:id="@+id/ChoosableImg3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/habit_3"
+            android:button="@null" />
+
+        <RadioButton
+            android:id="@+id/ChoosableImg4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/habit_4"
+            android:button="@null" />
+
+        <RadioButton
+            android:id="@+id/ChoosableImg5"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/habit_5"
+            android:button="@null" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/txtWhenInADay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="27dp"
+        android:text="在一天中的什么时候:"
+        android:textColor="#000000"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout7"
+        android:layout_width="413dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtWhenInADay">
+
+        <Button
+            android:id="@+id/anytime"
+            android:layout_width="70dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/shape2"
+            android:text="任意时间" />
+
+        <Button
+            android:id="@+id/morning"
+            android:layout_width="70dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/shape2"
+            android:text="晨间习惯" />
+
+        <Button
+            android:id="@+id/afternoon"
+            android:layout_width="70dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/shape2"
+            android:text="午间习惯" />
+
+        <Button
+            android:id="@+id/evening"
+            android:layout_width="70dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/shape2"
+            android:text="晚间习惯" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/SetTimesLable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:text="设置打卡次数:"
+        android:textColor="#000000"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout7" />
+
+    <Button
+        android:id="@+id/btnEveryDay"
+        android:layout_width="55dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/shape3"
+        android:text="每天"
+        app:layout_constraintStart_toEndOf="@+id/SetTimesLable"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout7" />
+    <Button
+        android:id="@+id/btnEveryWeek"
+        android:layout_width="55dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/shape3"
+        android:text="每周"
+        app:layout_constraintStart_toEndOf="@+id/btnEveryDay"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout7" />
+    <Button
+        android:id="@+id/btnEveryMonth"
+        android:layout_width="55dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/shape3"
+        android:text="每月"
+        app:layout_constraintStart_toEndOf="@+id/btnEveryWeek"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout7" />
+
+    <TextView
+        android:id="@+id/txtSetTimes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="每日"
+        android:textColor="#989898"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SetTimesLable" />
+
+    <EditText
+        android:id="@+id/editTimes"
+        android:layout_width="27dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="1"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@+id/txtSetTimes"
+        app:layout_constraintTop_toBottomOf="@+id/SetTimesLable" />
+
+    <TextView
+        android:id="@+id/txtci"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="20dp"
+        android:text="次"
+        android:textColor="#989898"
+        android:textSize="18dp"
+        app:layout_constraintStart_toEndOf="@+id/editTimes"
+        app:layout_constraintTop_toBottomOf="@+id/SetTimesLable" />
+
+    <TextView
+        android:id="@+id/txtSetAlert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="设置提醒时间(可选):"
+        android:textColor="#000000"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSetTimes" />
+
+    <EditText
+        android:id="@+id/editTime"
+        android:layout_width="87dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/shape_time"
+        android:elevation="2dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:hint="- -   :   - -"
+        android:nextFocusForward="@+id/editText4"
+        android:textAlignment="center"
+        android:textSize="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSetAlert" />
+
+    <TextView
+        android:id="@+id/txtAword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:text="写一句激励自己的话："
+        android:textColor="#000000"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTime" />
+
+
+    <EditText
+        android:id="@+id/editText5"
+        android:layout_width="333dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:inputType="text"
+        android:maxLength="15"
+        android:hint="只有千锤百炼，才能成为好钢。"
+        android:textAlignment="viewStart"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAword" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
