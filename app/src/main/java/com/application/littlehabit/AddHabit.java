@@ -1,9 +1,12 @@
 package com.application.littlehabit;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
@@ -11,8 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class AddHabit extends AppCompatActivity {
 
-    //定义返回按钮
-    private Button btnBack;
+    //定义返回,确定按钮
+    private Button btnBack,btnYes;
     //定义RadioGroup
     private RadioGroup radioGroup;
     //定义图标
@@ -23,6 +26,11 @@ public class AddHabit extends AppCompatActivity {
     private Button everyday,everyweek,everymonth;
     //定义频次文本
     private TextView txtSetTimes;
+    //定义列表
+    private ListView list;
+    //测试
+    private String[] buttons = {"Apple","Banana","Orange","Watermelon","Pear","Grape","Pimeapple","Cherry","Mango","Apple","Banana"};
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -157,11 +165,33 @@ public class AddHabit extends AppCompatActivity {
             }
         });
 
+
+        btnYes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ArrayAdapter adapter = new ArrayAdapter(AddHabit.this, android.R.layout.simple_list_item_1,buttons);//借助ArrayAdapter实现数据传递
+                list.setAdapter(adapter);
+
+                Intent intent = new Intent(AddHabit.this,MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
+
+
+
+
+
+
     }
 
     //初始化按钮
     void initView(){
         btnBack = this.findViewById(R.id.btnBack);
+        btnYes = this.findViewById(R.id.btnYes);
         radioGroup = this.findViewById(R.id.radioGroup);
         imgHabit_Lable = this.findViewById(R.id.imgHabit_Lable);
         anytime = this.findViewById(R.id.anytime);
@@ -172,6 +202,7 @@ public class AddHabit extends AppCompatActivity {
         everyweek = this.findViewById(R.id.btnEveryWeek);
         everymonth = this.findViewById(R.id.btnEveryMonth);
         txtSetTimes = this.findViewById(R.id.txtSetTimes);
+        list = this.findViewById(R.id.ListViewHabit);
     }
 
 }
