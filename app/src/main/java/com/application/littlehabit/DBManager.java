@@ -25,6 +25,13 @@ public class DBManager {
         this.db = db;
     }
 
+//    //删除数据表
+//    public void deleteSql(){
+//        db.delete()
+//
+//    }
+
+
     //数据库创建函数
     public void createTableOrNot(){
         boolean notable = true;
@@ -43,15 +50,15 @@ public class DBManager {
             String sql2 = "create table daka (hname text,dakadate date)";
             db.execSQL(sql1);
             db.execSQL(sql2);
-//            this.insertTestRecord();
+            this.InsertTestRecord();
         }
     }
 
     public void InsertTestRecord(){
-        String sql1 = "insert into habits values ('测试习惯1','habit_1',2,0,'晨间习惯','每天','只有千锤百炼，才能成为好钢。',5,0,3,'20190526',1)";
-        String sql2 = "insert into habits values ('测试习惯2','habit_2',3,0,'午间习惯','每天','只有千锤百炼，才能成为好钢。',3,0,2,'20190515',1)";
-        String sql3 = "insert into habits values ('测试习惯3','habit_3',1,0,'晚间习惯','每天','只有千锤百炼，才能成为好钢。',4,0,2,'20190522',1)";
-        String sql4 = "insert into habits values ('测试习惯4','habit_4',1,0,'任意时间','每天','只有千锤百炼，才能成为好钢。',6,0,3,'20190531',1)";
+        String sql1 = "insert into habits values ('测试习惯1','habit_1',2,'晨间习惯','每天','只有千锤百炼，才能成为好钢。',0,5,0,3,'20190526',1)";
+        String sql2 = "insert into habits values ('测试习惯2','habit_2',3,'午间习惯','每天','只有千锤百炼，才能成为好钢。',0,3,0,2,'20190515',1)";
+        String sql3 = "insert into habits values ('测试习惯3','habit_3',1,'晚间习惯','每天','只有千锤百炼，才能成为好钢。',0,4,0,2,'20190522',1)";
+        String sql4 = "insert into habits values ('测试习惯4','habit_4',1,'任意时间','每天','只有千锤百炼，才能成为好钢。',0,6,0,3,'20190531',1)";
 
         String sql5 = "insert into daka values ('测试习惯1','20190601'),('测试习惯1','20190602'),('测试习惯1','20190603'),('测试习惯1','20190610'),('测试习惯1','20190611')";
         String sql6 = "insert into daka values ('测试习惯2','20190603'),('测试习惯2','20190610'),('测试习惯2','20190611')";

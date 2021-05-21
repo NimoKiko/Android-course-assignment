@@ -9,9 +9,9 @@ public class HabitListItem {
 
 
     public HabitListItem(String habitName, String motivationWord, String day, String imgPath) {
-        HabitName = habitName;
-        MotivationWord = motivationWord;
-        Day = day;
+        this.HabitName = habitName;
+        this.MotivationWord = motivationWord;
+        this.Day = day;
         this.imgPath = imgPath;
     }
 
@@ -20,7 +20,7 @@ public class HabitListItem {
     }
 
     public void setHabitName(String habitName) {
-        HabitName = habitName;
+        this.HabitName = habitName;
     }
 
     public String getMotivationWord() {
@@ -28,7 +28,7 @@ public class HabitListItem {
     }
 
     public void setMotivationWord(String motivationWord) {
-        MotivationWord = motivationWord;
+        this.MotivationWord = motivationWord;
     }
 
     public String getDay() {
@@ -36,7 +36,7 @@ public class HabitListItem {
     }
 
     public void setDay(String day) {
-        Day = day;
+        this.Day = day;
     }
 
     public String getImgPath() {
@@ -46,4 +46,6 @@ public class HabitListItem {
     public void setImgPath(String imgPath) {
         this.imgPath = imgPath;
     }
+
+
 }

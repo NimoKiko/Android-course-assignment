@@ -29,11 +29,7 @@ import java.util.Map;
 
 public class fragment1 extends Fragment {
 
-    public fragment1() {
-        // Required empty public constructor
-    }
-
-    Habit[] habit;
+    Habit[] habit = null;
     private View v;
     private GridView gview;
     private List<Map<String, Object>> data_list;
@@ -63,46 +59,46 @@ public class fragment1 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fg1_habit_grid, container, false);
-//        //选择时间button
-//        bt[0] = (Button) v.findViewById(R.id.btn_anytime);
-//        bt[1] = (Button) v.findViewById(R.id.btn_morning);
-//        bt[2] = (Button) v.findViewById(R.id.btn_afternoon);
-//        bt[3] = (Button) v.findViewById(R.id.btn_evening);
-//
-//        //设置默认时间
-//        selectTime(0);
-//        //选择时间事件
-//        for (int i = 0; i < 4; i++) {
-//            bt[i].setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    switch (v.getId()) {
-//                        case R.id.btn_anytime:
-//                            selectTime(0);
-//                            break;
-//                        case R.id.btn_morning:
-//                            selectTime(1);
-//                            break;
-//                        case R.id.btn_afternoon:
-//                            selectTime(2);
-//                            break;
-//                        case R.id.btn_evening:
-//                            selectTime(3);
-//                            break;
-//                    }
-//                }
-//            });
-//        }
-//
-//        gview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                change_data(position);
-//            }
-//        });
+        v = inflater.inflate(R.layout.fg1_habit_grid, container, false);
+        //选择时间button
+        bt[0] = (Button) v.findViewById(R.id.btn_anytime);
+        bt[1] = (Button) v.findViewById(R.id.btn_morning);
+        bt[2] = (Button) v.findViewById(R.id.btn_afternoon);
+        bt[3] = (Button) v.findViewById(R.id.btn_evening);
 
-//        return v;
+        //设置默认时间
+        selectTime(0);
+        //选择时间事件
+        for (int i = 0; i < 4; i++) {
+            bt[i].setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    switch (v.getId()) {
+                        case R.id.btn_anytime:
+                            selectTime(0);
+                            break;
+                        case R.id.btn_morning:
+                            selectTime(1);
+                            break;
+                        case R.id.btn_afternoon:
+                            selectTime(2);
+                            break;
+                        case R.id.btn_evening:
+                            selectTime(3);
+                            break;
+                    }
+                }
+            });
+        }
+
+        gview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                change_data(position);
+            }
+        });
+
+        return v;
     }
 
     //点击的时候更新数据
@@ -145,7 +141,7 @@ public class fragment1 extends Fragment {
             }
         }
         time = t[k];
-        habit = mgr.getHabit(time, 1);
+        habit = mgr.getHabit(time,1);
         for (int i = 0; i < habit.length; i++) {
             if (habit[i].finished_num == habit[i].everyday_num) {
                 habit[i].hIcon = habit[i].hIcon + "_gray";

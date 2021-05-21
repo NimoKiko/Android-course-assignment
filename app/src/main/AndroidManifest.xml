@@ -32,6 +32,11 @@
                 <action android:name="com.application.littlehabit.AddHabit"/>
             </intent-filter>
         </activity>
+        <activity android:name=".HabitLog">
+            <intent-filter>
+                <action android:name="com.application.littlehabit.HabitLog"/>
+            </intent-filter>
+        </activity>
 
     </application>
 

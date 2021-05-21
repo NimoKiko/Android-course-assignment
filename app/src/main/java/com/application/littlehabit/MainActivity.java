@@ -7,6 +7,7 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -31,9 +32,21 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     private TextView top_text;
     //初始化添加习惯按钮
     private Button btnAddHabit;
+    //数据库相关变量
+    private MySqliteHelper helper;
+    private SQLiteDatabase db;
+    private DBManager mgr;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        //数据库变量初始化
+        helper = DBManager.getIntance(this);
+        db = helper.getWritableDatabase();//创建或打开数据库
+        mgr = new DBManager(db);
+        //创建表
+        mgr.createTableOrNot();
+
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.main);
@@ -84,6 +97,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
             case R.id.layoutToday:
                 top_text.setText("今日习惯");
                 fg1_habit_grid = new fragment1();
+                ((fragment1) fg1_habit_grid).setDBManager(mgr);
                 btnAddHabit.setVisibility(View.VISIBLE);
                 transaction.replace(R.id.content,fg1_habit_grid);
                 imgToday.setImageResource(R.drawable.ic_home_1_select);
@@ -91,6 +105,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
             case R.id.layoutAll:
                 top_text.setText("全部习惯");
                 fg2_all_habit = new fragment2();
+                ((fragment2)fg2_all_habit).setDBManager(mgr);
                 btnAddHabit.setVisibility(View.GONE);
                 transaction.replace(R.id.content,fg2_all_habit);
                 imgAll.setImageResource(R.drawable.ic_all_select);
@@ -113,6 +128,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         FragmentTransaction transaction = fm.beginTransaction();
         top_text.setText("今日习惯");
         fg1_habit_grid = new fragment1();
+        ((fragment1) fg1_habit_grid).setDBManager(mgr);
         transaction.replace(R.id.content,fg1_habit_grid);
         imgToday.setImageResource(R.drawable.ic_home_1_select);
         transaction.commit();

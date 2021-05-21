@@ -2,62 +2,60 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="#EFEFEF"
     android:layout_width="match_parent"
-    android:layout_height="80dp">
+    android:layout_height="80dp"
+    android:background="#EFEFEF">
 
     <ImageView
         android:id="@+id/imgHabitLableSample"
-        android:layout_width="0dp"
+        android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="21dp"
         android:layout_marginBottom="10dp"
+        android:scaleType="fitXY"
         android:src="@mipmap/ic_launcher_round"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/txtHabitNameSample"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtHabitNameSample"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="201dp"
-        android:layout_marginBottom="7dp"
+        android:layout_width="178dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:text="晨跑"
-        android:textColor="#040404"
-        android:textSize="18dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/txtMotivationWord"
-        app:layout_constraintEnd_toStartOf="@+id/txtHabitInsisted"
+        android:textColor="@color/black"
+        android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/imgHabitLableSample"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtMotivationWord"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="199dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
         android:text="只有千锤百炼，才能成为好钢。"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/txtHabitNameSample"
+        android:textSize="13sp"
+        app:layout_constraintStart_toEndOf="@id/imgHabitLableSample"
         app:layout_constraintTop_toBottomOf="@+id/txtHabitNameSample" />
 
     <TextView
         android:id="@+id/txtHabitDaySample"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="17dp"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
         android:text="15天"
-        android:textColor="#020202"
-        android:textSize="20dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/txtHabitInsisted"
-        app:layout_constraintStart_toStartOf="@+id/txtHabitInsisted"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
 
     <TextView
         android:id="@+id/txtHabitInsisted"
@@ -67,9 +65,7 @@
         android:text="共计坚持"
         android:textColor="#737373"
         android:textSize="12dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txtHabitNameSample"
         app:layout_constraintTop_toBottomOf="@+id/txtHabitDaySample" />
 
 
