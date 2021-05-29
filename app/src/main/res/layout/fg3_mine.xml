@@ -38,6 +38,7 @@
             android:orientation="horizontal">
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintlayoutTodayCard"
                 android:layout_width="148dp"
                 android:layout_height="133dp"
                 android:layout_marginRight="10dp"
@@ -71,6 +72,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintlayoutOverhabit"
                 android:layout_width="148dp"
                 android:layout_height="133dp"
                 android:layout_marginLeft="10dp"
@@ -115,6 +117,7 @@
             android:orientation="horizontal">
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintlayoutHelp"
                 android:layout_width="148dp"
                 android:layout_height="133dp"
                 android:layout_marginRight="10dp"
@@ -148,6 +151,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintlayoutAbout"
                 android:layout_width="148dp"
                 android:layout_height="133dp"
                 android:layout_marginLeft="10dp"

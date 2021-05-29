@@ -180,10 +180,10 @@ public class HabitLog extends AppCompatActivity {
     
     //结束习惯按钮点击事件
     public void finishHabit(View view) {
-        if (isFinished == 0) {
-            //结束习惯删除日程提醒
-            CalendarReminderUtils.deleteCalendarEvent(this, hname);
-        }
+//        if (isFinished == 0) {
+//            //结束习惯删除日程提醒
+//            CalendarReminderUtils.deleteCalendarEvent(this, hname);
+//        }
         mgr.switchHabit(hname, isFinished);
         finish();
     }

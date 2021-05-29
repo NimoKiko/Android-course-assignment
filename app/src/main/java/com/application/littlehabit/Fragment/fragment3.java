@@ -11,7 +11,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
+
 import com.application.littlehabit.Login;
+import com.application.littlehabit.OverHabit;
 import com.application.littlehabit.R;
 
 
@@ -21,16 +24,7 @@ public class fragment3 extends Fragment {
     private Button touxiang;
     private View view;
     private TextView txtAccountName;
-
-
-
-
-    public fragment3() {
-        // Required empty public constructor
-    }
-
-
-
+    private ConstraintLayout c1,c2,c3,c4;
 
 
     @Override
@@ -39,14 +33,6 @@ public class fragment3 extends Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fg3_mine, container, false);
 
-        return view;
-
-    }
-
-    @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-
-        super.onActivityCreated(savedInstanceState);
         initView();
 
         touxiang.setOnClickListener(new View.OnClickListener() {
@@ -57,12 +43,26 @@ public class fragment3 extends Fragment {
             }
         });
 
-    }
 
+        c2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), OverHabit.class);
+                startActivity(intent);
+            }
+        });
+
+        return view;
+
+    }
 
     void initView(){
         touxiang = view.findViewById(R.id.btnTouxiang);
         txtAccountName = view.findViewById(R.id.txtAccountName);
+        c1 = view.findViewById(R.id.constraintlayoutTodayCard);
+        c2 = view.findViewById(R.id.constraintlayoutOverhabit);
+        c3 = view.findViewById(R.id.constraintlayoutHelp);
+        c4 = view.findViewById(R.id.constraintlayoutHelp);
     }
 
 

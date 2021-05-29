@@ -105,7 +105,8 @@ public class DBManager {
                 habits[i++] = h1;
                 cursor2.moveToNext();
             }
-            ///应当有count == h.length;
+//            应当有count == h.length;
+             int num = habits.length;
             return habits;
         }else{//其他情况
             String sql1 = "select count(*) from habits where time=? and swit =" + isNotFinished;

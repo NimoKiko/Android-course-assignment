@@ -37,6 +37,11 @@
                 <action android:name="com.application.littlehabit.HabitLog"/>
             </intent-filter>
         </activity>
+        <activity android:name=".OverHabit">
+            <intent-filter>
+                <action android:name="com.application.littlehabit.OverHabit"/>
+            </intent-filter>
+        </activity>
 
     </application>
 
