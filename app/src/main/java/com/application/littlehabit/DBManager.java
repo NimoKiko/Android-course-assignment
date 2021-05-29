@@ -139,7 +139,7 @@ public class DBManager {
         if (count == 1)      //若已经存在这个名字的习惯则直接返回false
             return false;
         //否则创建这个习惯。
-        String sql2 = "insert into habits values('" + habit.getHname() + "','" + habit.gethIcon() + "'," + habit.getEveryday_num() + "," + habit.getTime() + ",'" + habit.getFrequent() + "','" + habit.getHtips() + "','" + habit.getFinished_num() + "'," + habit.getDays() + "," + habit.getInsisted_days() + "," + habit.getHighdays() + ",'" + habit.getCreatedate() + "'," + habit.getSwit() + ")";
+        String sql2 = "insert into habits values('" + habit.getHname() + "','" + habit.gethIcon() + "'," + habit.getEveryday_num() + ",'" + habit.getTime() + "','" + habit.getFrequent() + "','" + habit.getHtips() + "'," + habit.getFinished_num() + "," + habit.getDays() + "," + habit.getInsisted_days() + "," + habit.getHighdays() + ",'" + habit.getCreatedate() + "'," + habit.getSwit() + ")";
         db.execSQL(sql2);
         return true;    ///添加则返回true
     }
